@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valentine’s Digital Card</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="app">
+  <div class="card">
+
+    <!-- PAGE 0 – COVER -->
+    <div class="page active cover">
+      <img src="cover.png" alt="Cover">
+      <button id="startBtn">Create my card</button>
+    </div>
+
+    <!-- PAGE 1 – TEXT -->
+<div class="page">
+  <img src="page1.png" alt="Page 1">
+
+  <!-- TEXTO APLICADO NO CARTÃO (EM CIMA) -->
+  <div id="cardText" class="card-text"></div>
+
+  <!-- EDITOR (EMBAIXO) -->
+  <div class="text-editor">
+    <textarea id="customText" placeholder="Write your message here..."></textarea>
+    <button id="applyText">Add text to card</button>
+  </div>
+</div>
+
+    <!-- PAGE 2 – PHOTO -->
+    <div class="page photo-page">
+      <img src="page2.png" class="bg" alt="Page 2">
+      <div class="photo-frame">
+        <img id="photoPreview" />
+      </div>
+      <label class="upload">
+        Add your photo
+        <input type="file" id="photoInput" accept="image/*">
+      </label>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page">
+      <img src="page3.png" alt="Page 3">
+    </div>
+
+    <!-- PAGE 4 – PHOTO -->
+    <div class="page photo-page">
+      <img src="page4.png" class="bg" alt="Page 4">
+      <div class="photo-frame">
+        <img id="photoPreview2" />
+      </div>
+      <label class="upload">
+        Add your photo
+        <input type="file" id="photoInput2" accept="image/*">
+      </label>
+    </div>
+
+    <!-- PAGE 5 – FINAL (EDIT MODE ONLY) -->
+    <div class="page final">
+      <h2>Your card is ready 💖</h2>
+      <p>You can now share this card with someone special.</p>
+      <button id="shareBtn">Share this card 💌</button>
+    </div>
+
+  </div>
+
+  <button id="nextBtn" class="next">Next page</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
